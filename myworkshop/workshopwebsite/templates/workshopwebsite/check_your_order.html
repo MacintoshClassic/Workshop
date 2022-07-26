@@ -1,0 +1,18 @@
+{% extends 'workshopwebsite/base.html' %}
+
+<body>
+    {% block content %}
+    <title>Check your order</title>
+    {% for i in info %}
+    <b>Your name: </b>{{i.client.name}}<br />
+    <b>Your car: </b>{{i.car.model}}<br />
+    <b>Mechanic: </b>{{i.mechanic.name}}<br />
+    <b>Issue description: </b>{{i.issue_description}}<br />
+    <b>Price: </b>{{i.price}}<br />
+    <b>Beginning date: </b>{{i.beginning_date}}<br />
+    <b>Finishing date: </b>{{i.finishing_date}}<br />
+    {% endfor %}
+    <br><a class="btn btn-primary" href="http://127.0.0.1:8000/">Home</a><br>
+    </form>
+    {% endblock %}
+</body>

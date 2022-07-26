@@ -1,0 +1,19 @@
+{% extends 'workshopwebsite/base.html' %}
+
+<body>
+    {% block content %}
+    {% for x in orderInitialDetail %}
+    <b>Client: </b>{{x.client.name}}<br />
+    <b>Car: </b>{{x.car.model}}<br />
+    <b>Mechanic: </b>{{x.mechanic.name}}<br />
+    <b>Issue description: </b>{{x.issue_description}}<br />
+    <b>Price: </b>{{x.price}}<br />
+    <b>Beginning date: </b>{{x.beginning_date}}<br />
+    <b>Finishing date: </b>{{x.finishing_date}}<br />
+    <b>Order id: </b>{{x.id}}<br />
+    </p>
+    {% endfor %}
+    <br><a class="btn btn-primary" href="http://127.0.0.1:8000/">Home</a><br>
+    <br><a class="btn btn-primary" href="/proceed_to_data_completion/">Proceed to data completion</a><br>
+    {% endblock %}
+</body>

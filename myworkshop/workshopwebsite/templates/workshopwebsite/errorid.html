@@ -1,0 +1,14 @@
+{% extends 'workshopwebsite/base.html' %}
+
+<body>
+    {% block content %}
+    <title>not existing order id</title>
+    <p>Sorry, but the order id you typed doesn't exist. Please choose the id from those below</p>
+    {% for x in orders %}
+    <b>Order id: </b>{{x.id}}<br />
+    </p>
+    {% endfor %}
+    <br><a class="btn btn-primary" href="http://127.0.0.1:8000/">Home</a><br>
+    <br><a class="btn btn-primary" href="/proceed_to_data_completion/">Proceed to data completion</a><br>
+    {% endblock %}
+</body>

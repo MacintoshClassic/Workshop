@@ -1,0 +1,13 @@
+{% extends 'workshopwebsite/base.html' %}
+
+<body>
+    {% block content %}
+    <title>Add the order</title>
+    <form action="/add_order/" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <br><input type="submit" class="btn btn-primary" value="Add order"><br>
+        <br><a class="btn btn-primary" href="http://127.0.0.1:8000/">Home</a><br>
+    </form>
+    {% endblock %}
+</body>
